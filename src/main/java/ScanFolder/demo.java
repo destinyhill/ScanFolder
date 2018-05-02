@@ -1,4 +1,4 @@
-package ScanFolder;
+package main.java.ScanFolder;
 
 import java.io.File;
 import java.util.Scanner;
