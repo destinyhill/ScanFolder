@@ -2,9 +2,12 @@ package ScanFolder;
 
 import java.util.Scanner;
 
-public class UserDemo {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class ScanFolder {
 	
-	
+	public static final Logger log = LoggerFactory.getLogger(ScanFolder.class);
 	public static void main(String[] args){		
 		try{
 			Scanner path = new Scanner(System.in);
@@ -12,13 +15,13 @@ public class UserDemo {
 			String s = path.nextLine();
 			if(s!= null)
 			{
-				ProjectManage.scanFolder(s);
-				
-			}
+				ProjectManage.scanFolder(s);				
+			}		
+			log.info("successfully~~~~");
 			path.close();
 		}
 		catch(Exception e){
-			System.out.println(e.getMessage());
+			log.info(e.getMessage());
 		}
 		
 		
