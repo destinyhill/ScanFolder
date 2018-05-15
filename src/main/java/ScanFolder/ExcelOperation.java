@@ -1,7 +1,6 @@
 package ScanFolder;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -30,7 +29,6 @@ public class ExcelOperation {
 	
 	public static Workbook createWorkbook(File file) throws IOException{		
 		String fileName = file.getName();
-		//FileInputStream fs = new FileInputStream(file);
 		if(fileName.endsWith(".xls"))
 		{
 			wb = new HSSFWorkbook();
